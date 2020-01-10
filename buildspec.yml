@@ -9,3 +9,8 @@ phases:
   commands:
       - echo Build started on `date`
       - mvn clean test
+ reports:
+  SurefireReports:
+    files:
+      - '**/*'
+    base-directory: 'target/surefire-reports'
