@@ -1,7 +1,7 @@
 version: 0.0
-os: linux
+
 phases:
-	build:
-		commands:
-		- echo Running tests 
-		- mvn clean test
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn clean test
