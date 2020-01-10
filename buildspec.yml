@@ -1,0 +1,9 @@
+version: 1.0
+    phases:
+    install:
+        runtime-versions:
+            java: openjdk8
+    build:
+      commands:
+        - echo Running tests 
+        - mvn clean test
