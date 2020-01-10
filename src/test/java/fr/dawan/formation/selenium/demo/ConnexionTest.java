@@ -16,14 +16,8 @@ public class ConnexionTest {
 
     @Test
     public void connexionAvecIdentifiantsValides() throws InterruptedException, MalformedURLException {
-		ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("useAutomationExtension", false);
-        options.addArguments("--disable-extensions");
-        options.addArguments("start-maximized");
-        options.setCapability("remoteFiles","true");
-        DesiredCapabilities caps = new DesiredCapabilities(options);
-      
-       // caps.setBrowserName("chrome");
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
         URL u = new URL(url);
         RemoteWebDriver driver = new RemoteWebDriver(u, caps);
         driver.get("http://google.fr");
